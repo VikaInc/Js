@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // задание 1
+        let age = prompt('Введите ваш возраст: ');
+
+        if (age >= 0 && age <=2) {
+            alert("Вы малденец");
+        } else if (age >= 2 && age <= 11) {
+            alert("Вы ребенок");
+        } else if (age >= 12 && age <= 18) {
+            alert("Вы подросток");
+        } else if (age > 18 && age < 60) {
+            alert("Вы взрослый");
+        } else if (age >= 60) {
+            alert("Вы пенсионер");
+        } else {
+            alert("Неправильный ввод");
+        }
+
+
+
+        //задание 2 
+        let num =+prompt('Введите число от 0 до 9');
+
+        switch (num) {
+            case 0:
+                alert("Символ:  )");
+                break;
+            case 1: 
+                alert("Символ:  !");
+                break;
+            case 2:
+                alert("Символ:  @");
+                break;
+            case 3:
+                alert("Символ:  #");
+                break;
+            case 4:
+                alert("Символ:  $");
+                break;
+            case 5:
+                alert("Символ:  %");
+                break;
+            case 6:
+                alert("Символ:  ^");
+                break;
+            case 7: 
+                alert("Символ:  &");
+                break;
+            case 8:
+                alert("Символ:  *");
+                break;
+            case 9:
+                alert("Символ:  (");
+                break;
+            default: 
+                alert("Ошибка");
+        }
+
+
+        //задание 3
+        let myNum1 = +prompt('Введите первую цифру');
+        let myNum2 = +prompt('Введите вторую цифру');
+        let myNum3 = +prompt('Введите третью цифру');
+
+        let myNumResult = (myNum1 === myNum2 || myNum1 === myNum3 || myNum2 === myNum3 ) ? "В вашем числе есть одинаковые цифры" : "Все цифры разные";
+
+        // if (myNum1 === myNum2 || myNum1 === myNum3 || myNum2 === myNum3) {
+        //     alert('В вашем числе есть одинаковые цифры');
+        // } else {
+        //     alert ('Все цифры разные');
+        // }
+        
+
+        //задание 4
+        let year = +prompt('Введите год');
+        let yearResult = (year  % 400 === 0 || year % 4 === 0 && year % 100 !== 0) ? "Ваш год високосный" : "Ваш год не високосный";
+        alert(yearResult);
+
+
+        //задание 5
+        let pal1 = prompt ('Введите первую цифру');
+        let pal2 = prompt ('Введите вторую цифру');
+        let pal3 = prompt ('Введите третью цифру');
+        let pal4 = prompt ('Введите четвертую цифру');
+        let pal5 = prompt ('Введите пятую цифру');
+        let palResult = pal1 + pal2 + pal3 + pal4 + pal5;
+        
+        let palindrom = (pal1 === pal5 && pal2 === pal4) ? "Число палиндром" : "Число не палиндром";
+        alert(palindrom);
+
+
+
+        //задание 6
+        let usd = +prompt('Введите колличество USD: ');
+        let currency = prompt('В какую валюту хотите перевести? (EUR, UAN, AZN):');
+
+        if (currency == 'EUR') {
+            let result = usd * 0.95;
+            alert('Сумма в EUR: ' + result);
+        } else if (currency == 'UAN') {
+            let result = usd * 7.27;
+            alert('Сумма в UAN: ' + result);
+        } else if (currency == 'AZN') {
+            let result = usd * 1.70;
+            alert('Сумма в AZN: ' + result);
+        } else {
+            alert('Ошибка');
+        }
+        
+
+        //задание 7
+        let sum = +prompt ('Напишите сумму покупи');
+
+        if (sum >= 200 && sum < 300) {
+            let discount = 0.97;
+            let resultDiscount = sum * discount;
+            alert("Итого к оплате со скидкой в 3%: " + " " + resultDiscount);
+        } else if (sum >= 300 && sum < 500) {
+            let discount = 0.95;
+            let resultDiscount = sum * discount;
+            alert("Итого к оплате со скидкой в 5%: " + " " + resultDiscount);
+        } else if (sum >=500) {
+            let discount = 0.93;
+            let resultDiscount = sum * discount;
+            alert("Итого к оплате со скидкой в 7%: " + " " + resultDiscount);
+        }
+        //задание 8 
+        let c = +prompt('Введите длину окружности');
+        let p = +prompt('Введите периметр квадрата');
+        let resultPerim = (c <= p) ? "Окружность может поместиться в периметр квадрата":"Окружность НЕ может поместиться в периметр квадрата";
+        alert(resultPerim);
+      
+
+        //задание 9 
+        let question1 = prompt('Какого цвета снег? (Белого, Зеленого, Не знаю)');
+        let answer1 = 0; 
+
+        if (question1 == "Белого") {
+            alert('Правильно, Молодец! +2 балла');
+            answer1 = 2;
+        } else {
+            alert('Неверно');
+        }
+
+        let question2 = prompt('Какого цвета бумага? (Синяя, Не знаю, Белого)');
+        let answer2 = 0;
+        if (question2 == "Белого") {
+            alert('Правильно, Молодец! +2 балла');
+            answer2 = 2;
+        } else {
+            alert('Неверно');
+        }
+
+        let question3 = prompt('Что пьет корова? (Молоко, Воду, Не знаю)');
+        let answer3 = 0;
+        if (question3 == "Воду") {
+            alert('Правильно, Молодец! +2 балла');
+            answer3 = 2;
+        } else {
+            alert('Неверно');
+        }
+
+        let totalScore = answer1 + answer2 + answer3;
+        alert("У вас " + totalScore + " баллов");
+
+
+        //задание 10
+        let day = +prompt('Введите день');
+        let month1 = +prompt('Введите месяц');
+        let year1 = +prompt('Введите год');
+
+        let nextDay;
+        let nextMonth;
+        let nextYear;
+
+
+        if (day < 30) {
+            nextDay = day + 1;
+        } else if (day === 30 && (month1 === 4 || month1 === 6 || month1 === 9 || month1 === 11)) {
+            nextDay = 1;
+            nextMonth = month1 + 1;
+        } else if (day === 31 && (month1 === 11)) {
+            nextDay = 1;
+            nextMonth = month1 + 1;
+        } else if (day === 31 && month1 === 12) {
+            nextDay = 1;
+            nextMonth = 1;
+            nextYear = year1 + 1;
+        }
+
+    
+        if (nextMonth === 12 && nextDay === 31) {
+            nextMonth = 1;
+            nextYear += 1; 
+        }
+
+        alert("Завтра: " + nextDay + "." + nextMonth + "." + nextYear + "."); 
+    
+
+    </script>
+</body>
+</html>

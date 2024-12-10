@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //задания в которых необходимо импользовать if
+
+
+        //задание 1
+        let num = +prompt('Введите число:');
+
+        if (num > 0) {
+            alert("Ваше число положительное" );
+        } else if (num < 0) {
+            alert("Ваше число отрицательное" );
+        } else if (num == 0) {
+            alert("Ваше число равно нулю")
+        } else {
+            alert('Ошибка!');
+        }
+
+        //задание 2 
+        let age = +prompt('Введите ваш возраст (0-120)');
+
+        if (age > 0 && age <= 120) {
+            alert("Вам " + age + " лет");
+        } else {
+            alert('Вы ввели некорректные данные')
+        }
+
+        
+        //задание 3
+        let modul = +prompt('Введите число');
+
+        if (modul >= 0) {
+            alert('Модуль вашего числa: ' + modul);
+        } else if (modul < 0) {
+            alert( 'Модуль вашего числa: ' + modul * -1);
+        } else {
+            alert(Ошибка);
+        }
+        
+
+
+        //задание 4
+        let h =+prompt('Введите часы');
+        let m =+prompt('Введите минуты');
+        let s =+prompt('Введите секунды');
+
+        if (h > 23 && m > 59 && s > 59) {
+            alert('Неправильно указано время');
+        } else {
+            alert( h + ':' + m + ':' + s);
+        }
+
+
+        //задание 5 
+        let x =+prompt('Введите координату х');
+        let y =+prompt('Введите координату у');
+
+        if (x > 0 && y > 0) {
+            alert('Координата находится в первой четверти');
+        } else if (x < 0 && y > 0) {
+            alert('Координата находится в второй четверти');
+        } else if (x < 0 && y < 0) {
+            alert('Координата находится в третьей четверти');
+        } else if(x > 0 && y < 0) {
+            alert('Координата находится в четвертой четверти');
+        } else if (x == 0 && y == 0) {
+            alert('Координата находится в начале');
+        } else {
+            alert('Координата на оси');
+        }
+
+
+        
+
+
+
+
+
+        //задания с использованием SWITCH
+        
+        //задание 1
+        let month = +prompt('Введите число месяца');
+        switch (month) {
+            case 1: 
+                ('январь');
+                break;
+            case 2: 
+                alert('февраль');
+                break;
+            case 3: 
+                alert('март');
+                break;
+            case 4: 
+                alert('апрель');
+                break;
+            case 5: 
+                alert('май');
+                break;
+            case 6: 
+                alert('июнь');
+                break;
+            case 7: 
+                alert('июль');
+                break;
+            case 8: 
+                alert('август');
+                break;
+            case 9: 
+                alert('сентябрь');
+                break;
+            case 10: 
+                alert('октябрь');
+                break;
+            case 11: 
+                alert('ноябрь');
+                break;
+            case 12: 
+                alert('декабрь');
+                break;
+            default:
+                alert('Ошибка');
+        }
+
+        
+
+
+        //задание 2
+        let a = +prompt('Введите первое число: ');
+        let oper = prompt('Введите оператор: ');
+        let b = +prompt('Введите второе число: ');
+
+
+        switch (oper) {
+            case "+":
+                alert(a + b);
+                break;
+            case "-":
+                alert(a - b);
+                break;
+            case "*":
+                alert(a * b);
+                break;
+            case "/":
+                alert(a / b);
+                break;
+            default: 
+                alert(Ошибка)
+        }
+
+
+
+
+        //задания в которых используется тернарный оператор 
+
+        //задание 1
+        let num1 =+prompt('Введите первое число');
+        let num2 =+prompt('Введите второе число');
+        let result = (num1 > num2) ? "Первое число больше" : "Второе число больше";
+        alert(result);
+
+        //задание 2
+        let myNum = +prompt('Введите число');
+        let myResult = (myNum % 5 == 0) ? "Число кратно пяти" : "Число не кратно пяти";
+        alert(myResult);
+
+        //задание 3 
+        let planet = prompt('Напишите название планеты');
+        let planetResult = (planet == "Земля" || planet == "земля") ? "Привет, землянин!" : "Привет, инопланетянин!"
+        alert(planetResult);
+
+
+    </script>
+</body>
+</html>
